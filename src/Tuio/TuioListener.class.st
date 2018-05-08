@@ -23,7 +23,7 @@ Class {
 	#instVars : [
 		'tuioClient'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'event responses' }

@@ -28,7 +28,7 @@ Class {
 		'screenExtent',
 		'screenRedrawRatio'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'as yet unclassified' }

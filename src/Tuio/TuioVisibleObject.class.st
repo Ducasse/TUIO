@@ -21,7 +21,7 @@ Class {
 		'text',
 		'trans'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #accessing }

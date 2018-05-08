@@ -54,7 +54,7 @@ Class {
 	#classInstVars : [
 		'soleInstance'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'as yet unclassified' }

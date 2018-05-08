@@ -10,7 +10,7 @@ Class {
 		'received',
 		'semaphore'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #recording }

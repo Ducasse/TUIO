@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'tuioClient'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'simulating-private' }

@@ -8,5 +8,5 @@ I am subclassed simply to make garbage collection simpler after a Reactivision s
 Class {
 	#name : #TuioVisibleCursor,
 	#superclass : #CircleMorph,
-	#category : #Tuio
+	#category : #TUIO
 }

@@ -12,7 +12,7 @@ See TuioListener, TuioClient and TuioDemo for more information.
 Class {
 	#name : #TuioCursor,
 	#superclass : #Tuio2DMessage,
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #accessing }

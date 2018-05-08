@@ -13,7 +13,7 @@ Class {
 		'x',
 		'y'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #accessing }

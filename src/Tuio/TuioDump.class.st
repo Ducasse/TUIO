@@ -18,7 +18,7 @@ Reactivision from http://mtg.upf.edu/reactable/?software. You  will  need a webc
 Class {
 	#name : #TuioDump,
 	#superclass : #TuioListener,
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'event responses' }

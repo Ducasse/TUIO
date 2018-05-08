@@ -20,7 +20,7 @@ Class {
 		'movementY',
 		'rotationVector'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #equality }

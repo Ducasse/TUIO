@@ -8,7 +8,7 @@ Class {
 		'stream',
 		'semaphore'
 	],
-	#category : #Tuio
+	#category : #TUIO
 }
 
 { #category : #'as yet unclassified' }
