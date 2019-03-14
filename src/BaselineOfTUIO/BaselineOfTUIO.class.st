@@ -9,7 +9,7 @@ BaselineOfTUIO >> baseline: spec [
 	<baseline>
 	spec
 		baseline: 'OSC'
-		with: [ spec repository: 'github://RMODINRIA/OSC' ].
+		with: [ spec repository: 'github://Ducasse/OSC' ].
 	spec
 		for: #pharo
 		do: [ 
