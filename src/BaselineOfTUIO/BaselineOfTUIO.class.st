@@ -15,8 +15,8 @@ BaselineOfTUIO >> baseline: spec [
 		do: [ 
 			spec
 				package: 'TUIO-Tests'
-				with: [ spec requires: #('TUIO') ].
+				with: [ spec requires: #('Tuio') ].
 			spec
-				package: 'TUIO'
+				package: 'Tuio'
 				with: [ spec requires: #('OSC') ] ]
 ]
