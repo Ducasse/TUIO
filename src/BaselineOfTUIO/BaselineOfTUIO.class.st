@@ -13,9 +13,10 @@ BaselineOfTUIO >> baseline: spec [
 	spec
 		for: #pharo
 		do: [ 
+			"There were no tests! 
 			spec
 				package: 'TUIO-Tests'
-				with: [ spec requires: #('Tuio') ].
+				with: [ spec requires: #('Tuio') ]."
 			spec
 				package: 'Tuio'
 				with: [ spec requires: #('OSC') ] ]
