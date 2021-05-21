@@ -1,5 +1,5 @@
 "
-I am the abstract superclass of TuioCursor and TuioObject. Tthe paper on the TUIO protocol http://opensoundcontrol.org/node/76, itemizes other parts of the TUIO protocol, not yet required for this application, which could be future subclasses.
+I am the abstract superclass of TuioCursor and TuioObject. The paper on the TUIO protocol http://opensoundcontrol.org/, itemizes other parts of the TUIO protocol, not yet required for this application, which could be future subclasses.
 
 
 "

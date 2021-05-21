@@ -51,20 +51,18 @@ TuioVisibleObject >> delete [
 { #category : #initialize }
 TuioVisibleObject >> initialize [
 	"note from SD: putting the openInWorld in initialize method is a bad idea"
-	
+
 	| label font1 tm |
 	super initialize.
 	label := 'id'.
-	font1 := TextFontReference toFont: (StrikeFont familyName: 'Accuny' size:  48). 
-	tm:= StringMorph new contents: ( label  asText addAttribute: font1).
-	self flag: #fixMe. 
-	self rect:  (RectangleMorph new openInWorld).
+	font1 := TextFontReference
+		toFont: (StrikeFont familyName: 'Accuny' size: 48).
+	tm := StringMorph new contents: (label asText addAttribute: font1).
+	self rect: BorderedMorph new openInWorld.
 	self text: tm.
 	self rect addMorphCentered: text.
-	self trans: (TransformationMorph new  asFlexOf: rect).
-	self trans  openInWorld.
-
-
+	self trans: (TransformationMorph new asFlexOf: rect).
+	self trans openInWorld
 ]
 
 { #category : #accessing }

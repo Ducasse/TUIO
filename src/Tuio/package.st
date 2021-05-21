@@ -1,1 +1,1 @@
-Package { #name : #TUIO }
+Package { #name : #Tuio }

@@ -32,8 +32,8 @@ TuioRecorder class >> recordNextGestureInto: aFileName [
 
 { #category : #recording }
 TuioRecorder >> drive [
+
 	| msgArray |
-	
 	received := false.
 	msgArray := self oscServer nextMessage.
 	started := true.
@@ -50,7 +50,6 @@ TuioRecorder >> recordNextGesture [
 	started:= false.
 	record := ReadWriteStream on: ''.
 	self start.
-	
 	semaphore wait.
 	^ record contents.
 ]

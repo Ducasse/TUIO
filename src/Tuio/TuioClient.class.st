@@ -57,12 +57,12 @@ Class {
 	#category : #TUIO
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #flushing }
 TuioClient class >> flush [
 	soleInstance := nil.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 TuioClient class >> new [
 	self error: 'Cannot create with new - use singleInstance'
 ]
@@ -122,7 +122,7 @@ TuioClient >> currentFrame: anObject [
 { #category : #'object and cursor reification' }
 TuioClient >> cursorFromArray: argArray [
 	| cursor |
-     cursor :=  TuioCursor new.
+   cursor :=  TuioCursor new.
 	cursor sessionId:  argArray third.
 	cursor x:  argArray fourth.
 	cursor y:  argArray fifth.
@@ -140,8 +140,8 @@ TuioClient >> doFrameChangeFrom:msgArray [
 
 { #category : #'event triggering' }
 TuioClient >> doFrameUpdates:msgArray [
-	 		self doFrameChangeFrom: msgArray.
-			(self currentFrame > self lastFrame)  ifTrue: [self triggerEvent: #refresh]  .
+	self doFrameChangeFrom: msgArray.
+	(self currentFrame > self lastFrame) ifTrue: [ self triggerEvent: #refresh ].
 
 ]
 
@@ -254,7 +254,7 @@ TuioClient >> nextMessage [
 { #category : #'object and cursor reification' }
 TuioClient >> objFromArray: argArray [
 	| mine |
-    mine :=  TuioObject new.
+   mine :=  TuioObject new.
 	mine sessionId:  (argArray at:3).
 	mine fiducialId:  (argArray at:4).
 	mine x:  (argArray at:5).
@@ -393,7 +393,7 @@ TuioClient >> setAlive: blobIdList [
 { #category : #'private-labels' }
 TuioClient >> setCommandLabel [
 
-	^ 'set'.
+	^ 'set'
 ]
 
 { #category : #'main protocol' }
@@ -429,9 +429,12 @@ TuioClient >> tagDict: anObject [
 ]
 
 { #category : #'event triggering' }
-TuioClient >> updateCursorListenersFor: aCursor withSessionId: sessId [ 
-	self triggerEvent: #updateTuioCursor
-		withArguments: {  aCursor. sessId }
+TuioClient >> updateCursorListenersFor: aCursor withSessionId: sessId [
+	self
+		triggerEvent: #updateTuioCursor
+		withArguments:
+			{aCursor.
+			sessId} 
 ]
 
 { #category : #'updating rosters' }
@@ -455,9 +458,12 @@ TuioClient >> updateCursorRosterFrom:msgArray [
 ]
 
 { #category : #'event triggering' }
-TuioClient >> updateObjectListenersFor: anObject withClassId: classId [ 
-	self triggerEvent: #updateTuioObject
-		withArguments: {  anObject. classId}
+TuioClient >> updateObjectListenersFor: anObject withClassId: classId [
+	self
+		triggerEvent: #updateTuioObject
+		withArguments:
+			{anObject.
+			classId} 
 ]
 
 { #category : #'updating rosters' }

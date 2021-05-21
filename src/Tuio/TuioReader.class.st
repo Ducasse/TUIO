@@ -20,12 +20,12 @@ TuioReader class >> read: aFileName [
 
 { #category : #'osc server access' }
 TuioReader >> nextMessage [
-	| message |
 
+	| message |
 	message := self stream nextLine.
 	^ message 
 		ifNil: [ self stop. nil ]
-		ifNotNil: [ Compiler evaluate: message ]
+		ifNotNil: [ OpalCompiler evaluate: message ]
 ]
 
 { #category : #protocol }

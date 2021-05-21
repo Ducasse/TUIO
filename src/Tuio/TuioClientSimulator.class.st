@@ -62,7 +62,6 @@ TuioClientSimulator >> setAlive: blobIdList [
 
 { #category : #simulating }
 TuioClientSimulator >> simulateDoubleClick [
-	
 	"Send one point, remove it and send an new point to make a double click."
 	
 	self setAlive: {1}.
@@ -74,22 +73,17 @@ TuioClientSimulator >> simulateDoubleClick [
 
 { #category : #simulating }
 TuioClientSimulator >> simulateDrag [
-
 	"Send two points and modify their positions to the TUIOClient  in order to simulate a left scroll."
 	
 	| blobsId |
-	
 	blobsId := {1}.
-	
 	self setAlive: blobsId.
-	
 	75 to: 25 by: -1 do: [ :i |
 		self set: blobsId first x: 0.01*i  y: 0.4 ].
 ]
 
 { #category : #simulating }
 TuioClientSimulator >> simulateOneFingerClick [
-
 	"Send one point to the TUIOClient  in order to simulate a simple click."
 	
 	self setAlive: {1}.
@@ -101,11 +95,8 @@ TuioClientSimulator >> simulatePinchIn [
 	"Send two points and modify their positions to the TUIOClient  in order to simulate a scroll top."
 	
 	| blobsId |
-	
 	blobsId := {1 . 2}.
-	
 	self setAlive: blobsId.
-	
 	45 to: 1 by: -1 do: [ :i |
 		self set: blobsId first x: 0.01*i y: 0.4 .
 		self set: blobsId second x: (1-0.01*i)  y: 0.4 . ].
@@ -113,15 +104,11 @@ TuioClientSimulator >> simulatePinchIn [
 
 { #category : #simulating }
 TuioClientSimulator >> simulateScrollDown [
-
 	"Send two points and modify their positions to the TUIOClient  in order to simulate a down scroll."
 	
 	| blobsId |
-	
 	blobsId := {1 . 2}.
-	
 	self setAlive: blobsId.
-			
 	1 to: 90 do: [ :i |
 		self set: blobsId first x: 0.4  y: 0.01*i.
 		self set: blobsId second x: 0.6  y: 0.01*i. ].
@@ -145,18 +132,14 @@ TuioClientSimulator >> simulateScrollLeft [
 
 { #category : #simulating }
 TuioClientSimulator >> simulateScrollRight [
-
 	"Send two points and modify their positions to the TUIOClient  in order to simulate a right scroll."
-	
+
 	| blobsId |
-	
 	blobsId := {1 . 2}.
-	
 	self setAlive: blobsId.
-	
-	1 to: 90 do: [ :i |
-		self set: blobsId first x: 0.01*i  y: 0.4.
-		self set: blobsId second x: 0.01*i  y: 0.6. ].
+	1 to: 90 do: [ :i | 
+		self set: blobsId first x: 0.01 * i y: 0.4. 
+		self set: blobsId second x: 0.01 * i y: 0.6 ]
 ]
 
 { #category : #simulating }
